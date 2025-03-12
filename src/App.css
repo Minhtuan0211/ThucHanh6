@@ -1,3 +1,4 @@
+/* App.css */
 .App {
   text-align: center;
 }
@@ -5,27 +6,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  animation: App-logo-spin infinite 20s linear;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +16,56 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-header {
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--secondary-color);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.MuiButton-root {
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+.MuiButton-root:hover {
+  transform: scale(1.05);
+}
+
+.MuiCard-root {
+  transition: box-shadow var(--transition-speed);
+}
+.MuiCard-root:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide img {
+  border-radius: 8px;
+  transition: transform var(--transition-speed);
+}
+.swiper-slide img:hover {
+  transform: scale(1.02);
+}
+
+.MuiTableCell-root {
+  font-size: 1rem;
+}
+
+.swiper-productlist .swiper-button-next::after,
+.swiper-productlist .swiper-button-prev::after {
+  content: '' !important;
 }
